@@ -1,0 +1,132 @@
+.place-detail {
+  min-height: 100vh;
+  padding: 2rem;
+  background: transparent;
+}
+
+.back-button {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.8rem 1.5rem;
+  background: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 100;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.place-detail-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.place-detail-image {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.place-detail-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(45deg, #8B4513, #A0522D);
+  color: white;
+}
+
+.place-detail-overlay h1 {
+  font-size: 3em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.place-detail-info {
+  padding: 2rem;
+}
+
+.place-description {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.place-details h2 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+
+.place-details p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.1em;
+}
+
+.place-detail-error {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.place-detail-error h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.place-detail-error button {
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.place-detail-error button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .place-detail {
+    padding: 1rem;
+  }
+
+  .place-detail-image {
+    height: 300px;
+  }
+
+  .place-detail-overlay h1 {
+    font-size: 2em;
+  }
+
+  .back-button {
+    top: 1rem;
+    left: 1rem;
+  }
+} 
