@@ -11,7 +11,7 @@ interface Photo {
 const photos: Photo[] = [
   {
     id: 1,
-    url: '/memories/WhatsApp Image 2025-03-28 at 1.10.27 PM.jpeg',
+    url: '/public/memories/WhatsApp Image 2025-03-28 at 1.10.27 PM.jpeg',
     caption: 'Rebel',
     size: 'small'
   },
