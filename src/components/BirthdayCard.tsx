@@ -22,7 +22,7 @@ export const BirthdayCard = ({
           <div className="card-content">
             <img
               className="sword-image"
-              src="/sword.svg"
+              src="../assets/sword.svg"
               alt="Decorative sword"
             />
             <h2 className="birthday-title">
