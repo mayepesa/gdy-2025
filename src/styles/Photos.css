@@ -1,134 +1,100 @@
-.photos-section {
-  padding: 2rem;
-  background: rgba(245, 230, 211, 0.7);
-  border-radius: 15px;
-  margin: 2rem;
+.photo-carousel {
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.photos-section h2 {
+.photo-carousel h2 {
   text-align: center;
-  color: #8B4513;
-  margin-bottom: 2rem;
-  font-family: 'Playfair Display', serif;
+  color: #e5ddd8;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .masonry-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+  gap: 20px;
+  padding: 20px;
 }
 
 .masonry-item {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  cursor: pointer;
-  aspect-ratio: 1;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  aspect-ratio: 1;
 }
 
 .masonry-item:hover {
-  transform: scale(1.02);
+  transform: translateY(-5px);
 }
 
-.masonry-item img {
+.masonry-item.small {
+  grid-row: span 1;
+}
+
+.masonry-item.medium {
+  grid-row: span 2;
+}
+
+.masonry-item.large {
+  grid-row: span 3;
+}
+
+.photo-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.photo-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
-.masonry-item:hover img {
+.masonry-item:hover .photo-container img {
   transform: scale(1.05);
 }
 
-.overlay {
+.photo-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 20px;
   transform: translateY(100%);
   transition: transform 0.3s ease;
 }
 
-.masonry-item:hover .overlay {
+.masonry-item:hover .photo-overlay {
   transform: translateY(0);
 }
 
-.overlay p {
-  margin: 0;
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-/* Modal styles */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  padding: 1rem;
-}
-
-.modal-content {
-  position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.modal-content img {
-  max-width: 100%;
-  max-height: 80vh;
-  object-fit: contain;
-  border-radius: 4px;
-}
-
-.modal-content p {
-  margin: 1rem 0;
-  text-align: center;
-  color: #8B4513;
-  font-size: 1.1rem;
-}
-
-.modal-content button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: #8B4513;
+.photo-caption {
   color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.modal-content button:hover {
-  background: #A0522D;
+  margin: 0;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
   .masonry-grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 0.5rem;
+    gap: 15px;
   }
-
-  .photos-section {
-    padding: 1rem;
-    margin: 1rem;
+  
+  .masonry-item.medium {
+    grid-row: span 1;
+  }
+  
+  .masonry-item.large {
+    grid-row: span 2;
   }
 } 
